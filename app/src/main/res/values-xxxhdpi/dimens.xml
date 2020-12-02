@@ -1,0 +1,67 @@
+<resources>
+    <dimen name="size_ibutton_marginStart">15dip</dimen>
+    <dimen name="size_ibutton_marginTop">20dip</dimen>
+
+    <!-- Float Button -->
+    <dimen name="size_float_height">100dip</dimen>
+    <dimen name="size_float_width">100dip</dimen>
+    <dimen name="size_float_marginStart">345dip</dimen>
+    <dimen name="size_float_marginTop">220dip</dimen>
+
+    <!-- Views -->
+    <dimen name="view">52dp</dimen>
+    <dimen name="view1">45dp</dimen>
+
+    <!-- CardViews -->
+
+    <dimen name="heigth_cardview1">210dp</dimen>
+    <dimen name="marginTop_cardview1">260dp</dimen>
+    <dimen name="marginEnd_cardview1">10dp</dimen>
+    <dimen name="marginStart_cardview1">10dp</dimen>
+
+    <dimen name="heigth_cardview2">150dp</dimen>
+    <dimen name="marginTop_cardview2">480dp</dimen>
+    <dimen name="marginEnd_cardview2">10dp</dimen>
+    <dimen name="marginStart_cardview2">10dp</dimen>
+    <dimen name="marginBottom_cardview2">10dp</dimen>
+
+    <!-- TextViews -->
+    <dimen name="nom_utilisateur">30sp</dimen>
+    <dimen name="nom_utilisateur_marginStart">15dp</dimen>
+    <dimen name="nom_utilisateur_marginTop">195dp</dimen>
+
+    <dimen name="nom_cardview">23sp</dimen>
+    <dimen name="nom_cardview_marginStart">18dp</dimen>
+    <dimen name="nom_cardview_marginTop">17dp</dimen>
+
+    <dimen name="propos_cardview">23sp</dimen>
+    <dimen name="propos_cardview_marginStart">18dp</dimen>
+    <dimen name="propos_cardview_marginTop">10dp</dimen>
+
+    <dimen name="description">13sp</dimen>
+    <dimen name="description_marginStart">18dp</dimen>
+    <dimen name="description_marginTop">55dp</dimen>
+
+    <dimen name="pointer_text_marginTop">74dip</dimen>
+    <dimen name="pointer_text_marginStart">56dip</dimen>
+
+    <dimen name="phone_text_marginTop">125dip</dimen>
+    <dimen name="phone_text_marginStart">56dip</dimen>
+
+    <dimen name="net_text_marginTop">174dip</dimen>
+    <dimen name="pnet_text_marginStart">56dip</dimen>
+
+    <!-- Images -->
+    <dimen name="size_image_height">200dip</dimen>
+    <dimen name="size_image_width">@dimen/size_image_height</dimen>
+
+    <dimen name="pointer_marginTop">70dip</dimen>
+    <dimen name="pointer_marginStart">17dip</dimen>
+
+    <dimen name="phone_marginTop">120dip</dimen>
+    <dimen name="phone_marginStart">17dip</dimen>
+
+    <dimen name="net_marginTop">170dip</dimen>
+    <dimen name="net_marginStart">17dip</dimen>
+
+</resources>

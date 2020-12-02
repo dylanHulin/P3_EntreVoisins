@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.neighbour_list.ProfileNeighbourActivity"
+    android:id="@+id/profile_neighbour">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundUser"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/avatar_profile"
+            android:layout_width="match_parent"
+            android:layout_height="275dp"
+            android:contentDescription="@android:string/ok"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <ImageButton
+            android:id="@+id/back_button"
+            android:background="#00000000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_ibutton_marginStart"
+            android:layout_marginTop="@dimen/size_ibutton_marginTop"
+            app:srcCompat="@drawable/ic_back_24dp" />
+
+        <TextView
+            android:id="@+id/nom_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/nom_utilisateur_marginTop"
+            android:layout_marginStart="@dimen/nom_utilisateur_marginStart"
+            android:text="Utilisateur"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="@dimen/nom_utilisateur" />
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heigth_cardview1"
+            android:layout_marginStart="@dimen/marginStart_cardview1"
+            android:layout_marginTop="@dimen/marginTop_cardview1"
+            android:layout_marginEnd="@dimen/marginEnd_cardview1"
+            app:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/nom_user_cardview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/nom_cardview_marginStart"
+                android:layout_marginTop="@dimen/nom_cardview_marginTop"
+                android:text="Name"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/nom_cardview" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/view"
+                android:background="#FFE0E0E0" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pointer_marginStart"
+                android:layout_marginTop="@dimen/pointer_marginTop"
+                app:srcCompat="@drawable/ic_pointer_24dp" />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pointer_text_marginStart"
+                android:layout_marginTop="@dimen/pointer_text_marginTop"
+                android:text="@string/adresse"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/description" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/phone_marginStart"
+                android:layout_marginTop="@dimen/phone_marginTop"
+                app:srcCompat="@drawable/ic_call_black_24dp" />
+
+            <TextView
+                android:id="@+id/telephone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/phone_text_marginStart"
+                android:layout_marginTop="@dimen/phone_text_marginTop"
+                android:text="@string/telephone"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/description" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/net_marginStart"
+                android:layout_marginTop="@dimen/net_marginTop"
+                app:srcCompat="@drawable/ic_net_24dp" />
+
+            <TextView
+                android:id="@+id/social_network"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/pnet_text_marginStart"
+                android:layout_marginTop="@dimen/net_text_marginTop"
+                android:text="@string/reseau_social"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/description" />
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_favorite"
+            android:layout_width="@dimen/size_float_width"
+            android:layout_height="@dimen/size_float_height"
+            android:layout_marginTop="@dimen/size_float_marginTop"
+            android:layout_marginStart="@dimen/size_float_marginStart"
+            app:backgroundTint="@color/colorFloatingButton"
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/ic_star_white_24dp" />
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/heigth_cardview2"
+            android:layout_marginStart="@dimen/marginStart_cardview2"
+            android:layout_marginTop="@dimen/marginTop_cardview2"
+            android:layout_marginEnd="@dimen/marginEnd_cardview2"
+            android:layout_marginBottom="@dimen/marginBottom_cardview2"
+            app:cardCornerRadius="4dp">
+
+            <TextView
+                android:id="@+id/about_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/propos_cardview_marginStart"
+                android:layout_marginTop="@dimen/propos_cardview_marginTop"
+                android:text="@string/a_propos_de_moi"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/propos_cardview" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="@dimen/view1"
+                android:background="#FFE0E0E0" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/description_marginStart"
+                android:layout_marginTop="@dimen/description_marginTop"
+                android:text="@string/description"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="@dimen/description" />
+
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
