@@ -40,7 +40,7 @@ Si vous découvrez une faille de sécurité dans l'application, n'hésitez pas �
 *   [Deyine](https://github.com/Deyine)
 *   [Dylan Hulin](https://github.com/dylanHulin)
 
-## Libraries
+## Librairies
 * [ButterKnife](https://github.com/JakeWharton/butterknife)
 * [Glide](https://github.com/bumptech/glide)
 * [EventBus](https://github.com/greenrobot/EventBus)
