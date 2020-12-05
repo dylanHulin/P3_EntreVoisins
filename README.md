@@ -24,7 +24,7 @@ Plusieurs fonctionnalités sont disponibles :
 
 ## Security
 
-Si vous découvrez une faille de sécurité dans l'application, n'hésitez pas à envoyer un e-mail  : [Fake.User@gmail.com].
+Si vous découvrez une faille de sécurité dans l'application, n'hésitez pas à envoyer un e-mail  : [Fake.User@gmail.com](Fake.User@gmail.com).
 
 
 
