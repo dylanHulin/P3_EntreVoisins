@@ -10,6 +10,9 @@ Vous pouvez installer le package depuis ce lien git : [EntreVoisins Terminée](h
 #### Version de base
 Vous pouvez installer le package depuis ce lien git : [EntreVoisins Basique](https://github.com/Deyine/OpenClassrooms.git)
 
+## Exécution & Compilation
+
+
 ## Utilisation
 
 Plusieurs fonctionnalités sont disponibles :
