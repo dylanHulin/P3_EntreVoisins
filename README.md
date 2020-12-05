@@ -38,6 +38,10 @@ Si vous découvrez une faille de sécurité dans l'application, n'hésitez pas �
 ## License
 
 Touts droits réservés à [OpenClassrooms](https://openclassrooms.com/)
+
+## Aperçus
+
+
     
 
 
