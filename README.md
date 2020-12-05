@@ -22,6 +22,10 @@ Plusieurs fonctionnalités sont disponibles :
 ### Ajouter/Retirer des favoris
 ***Note :*** *Permet d'ajouter ou de retirer un voisin à la liste des favoris.*
 
+## Security
+
+Si vous découvrez une faille de sécurité dans l'application, n'hésitez pas à envoyer un e-mail  : [Fake.User@gmail.com].
+
 
 
 
