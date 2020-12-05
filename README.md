@@ -8,7 +8,7 @@
 Vous pouvez installer le package depuis ce lien git : [EntreVoisins Terminée](https://github.com/dylanHulin/P3_EntreVoisins.git)
 
 #### Version de base
-[EntreVoisins Basique](https://github.com/Deyine/OpenClassrooms.git)
+Vous pouvez installer le package depuis ce lien git : [EntreVoisins Basique](https://github.com/Deyine/OpenClassrooms.git)
 
 ## Utilisation
 
@@ -26,10 +26,19 @@ Plusieurs fonctionnalités sont disponibles :
 ### Ajouter/Retirer des favoris
 ***Note :*** *Permet d'ajouter ou de retirer un voisin à la liste des favoris.*
 
-## Security
+## Securité
 
 Si vous découvrez une faille de sécurité dans l'application, n'hésitez pas à envoyer un e-mail  : [Fake.User@gmail.com](Fake.User@gmail.com).
 
+## Crédits
+
+*   [Deyine](https://github.com/Deyine)
+*   [Dylan Hulin](https://github.com/dylanHulin)
+
+## License
+
+Touts droits réservés à [OpenClassrooms](https://openclassrooms.com/)
+    
 
 
 
