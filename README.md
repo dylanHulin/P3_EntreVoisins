@@ -4,7 +4,11 @@
 
 ## Installation
 
-Vous pouvez installer le package depuis ce lien git : [EntreVoisins](https://github.com/dylanHulin/P3_EntreVoisins.git)
+#### Version terminée
+Vous pouvez installer le package depuis ce lien git : [EntreVoisins Terminée](https://github.com/dylanHulin/P3_EntreVoisins.git)
+
+#### Version de base
+[EntreVoisins Basique](https://github.com/Deyine/OpenClassrooms.git)
 
 ## Utilisation
 
@@ -25,6 +29,8 @@ Plusieurs fonctionnalités sont disponibles :
 ## Security
 
 Si vous découvrez une faille de sécurité dans l'application, n'hésitez pas à envoyer un e-mail  : [Fake.User@gmail.com](Fake.User@gmail.com).
+
+
 
 
 
