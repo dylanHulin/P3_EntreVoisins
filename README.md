@@ -8,7 +8,6 @@
 
 #### Version de base
 1.Vous pouvez installer le package depuis ce lien git : [EntreVoisins Basique](https://github.com/Deyine/OpenClassrooms.git)
-
 2. Dans Android Studio, sélectionnez *File | Open...*
 3. Sélectionnez le projet
 
