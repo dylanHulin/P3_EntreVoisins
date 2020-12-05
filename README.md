@@ -4,7 +4,7 @@
 
 ## Installation
 
-Vous pouvez installer le package depuis ce lien git : [EntreVoisins]: https://github.com/dylanHulin/P3_EntreVoisins.git
+Vous pouvez installer le package depuis ce lien git : [EntreVoisins](https://github.com/dylanHulin/P3_EntreVoisins.git)
 
 ## Utilisation
 
