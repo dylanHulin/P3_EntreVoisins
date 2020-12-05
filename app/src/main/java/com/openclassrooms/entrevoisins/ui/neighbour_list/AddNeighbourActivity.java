@@ -84,9 +84,8 @@ public class AddNeighbourActivity extends AppCompatActivity {
 
     }
 
-
     /*
-
+    Adding a neighbour.
      */
     @OnClick(R.id.create)
     void addNeighbour() {

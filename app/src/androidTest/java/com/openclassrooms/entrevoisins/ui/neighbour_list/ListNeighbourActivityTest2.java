@@ -30,22 +30,20 @@ import static org.hamcrest.Matchers.allOf;
 
 @LargeTest
 @RunWith(AndroidJUnit4.class)
-public class ListNeighbourActivityTest {
+public class ListNeighbourActivityTest2 {
 
     @Rule
     public ActivityTestRule<ListNeighbourActivity> mActivityTestRule = new ActivityTestRule<>(ListNeighbourActivity.class);
 
     @Test
-    public void listNeighbourActivityTest() {
+    public void listNeighbourActivityTest2() {
         ViewInteraction recyclerView = onView(
                 allOf(withId(R.id.list_neighbours),
                         withParent(withId(R.id.container))));
         recyclerView.perform(actionOnItemAtPosition(0, click()));
-    }
 
-    public void addToFavorites() {
         ViewInteraction floatingActionButton = onView(
-                allOf(withId(R.id.add_favorite), withContentDescription("TODO"),
+                allOf(withId(R.id.add_favorite), withContentDescription("FAB_favorite"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(R.id.profile_neighbour),
@@ -53,9 +51,7 @@ public class ListNeighbourActivityTest {
                                 4),
                         isDisplayed()));
         floatingActionButton.perform(click());
-    }
 
-    public void backToList() {
         ViewInteraction appCompatImageButton = onView(
                 allOf(withId(R.id.back_button),
                         childAtPosition(
@@ -65,9 +61,7 @@ public class ListNeighbourActivityTest {
                                 1),
                         isDisplayed()));
         appCompatImageButton.perform(click());
-    }
 
-    public void getFavByTab() {
         ViewInteraction tabView = onView(
                 allOf(withContentDescription("Favorites"),
                         childAtPosition(
@@ -77,9 +71,7 @@ public class ListNeighbourActivityTest {
                                 1),
                         isDisplayed()));
         tabView.perform(click());
-    }
 
-    public void getFavBySwipe() {
         ViewInteraction viewPager = onView(
                 allOf(withId(R.id.container),
                         childAtPosition(
@@ -90,18 +82,14 @@ public class ListNeighbourActivityTest {
                                 1),
                         isDisplayed()));
         viewPager.perform(swipeLeft());
-    }
 
-    public void getProfileFromFavorites() {
         ViewInteraction recyclerView2 = onView(
                 allOf(withId(R.id.list_neighbours),
                         withParent(withId(R.id.container))));
         recyclerView2.perform(actionOnItemAtPosition(0, click()));
-    }
 
-    public void deleteFavorite() {
         ViewInteraction floatingActionButton2 = onView(
-                allOf(withId(R.id.add_favorite), withContentDescription("TODO"),
+                allOf(withId(R.id.add_favorite), withContentDescription("FAB_favorite"),
                         childAtPosition(
                                 childAtPosition(
                                         withId(R.id.profile_neighbour),
@@ -110,7 +98,6 @@ public class ListNeighbourActivityTest {
                         isDisplayed()));
         floatingActionButton2.perform(click());
     }
-
 
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {

@@ -1,7 +1,6 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -11,6 +10,7 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
@@ -19,15 +19,12 @@ import com.openclassrooms.entrevoisins.di.DI;
 import com.openclassrooms.entrevoisins.model.Neighbour;
 import com.openclassrooms.entrevoisins.service.NeighbourApiService;
 
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 
-
 public class ProfileNeighbourActivity extends AppCompatActivity {
-
 
     //----------XML Referencing----------//
     @BindView(R.id.nom_user)
@@ -48,7 +45,6 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
     public FloatingActionButton addFavorites;
 
     //----------Init Variables----------//
-
     private int position;
     private NeighbourApiService mApiService;
     private Neighbour mNeighbourSelected;
@@ -56,11 +52,9 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
     private String favTab;
 
     //----------Init Buttons----------//
-
     private ImageButton mBackButton;
 
     //----------Logic----------//
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,10 +63,15 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
 
         mApiService = DI.getNeighbourApiService();
 
+        /*
+        Get the position of selected neighbour
+         */
         Intent intent = getIntent();
         position = intent.getIntExtra("POSITION", 0);
 
-        //mNeighbourSelected = mApiService.getNeighbourByPosition(position);
+        /*
+        Get the good view depending of boolean
+         */
         favTab = intent.getStringExtra("FRAGMENT_TAB");
 
         if (favTab.equals("ALL")) {
@@ -81,6 +80,9 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
             mNeighbourSelected = mApiService.getNeighboursFavorites().get(position);
         }
 
+        /*
+        Setting favorite button yellow if is favorite
+         */
         if (mNeighbourSelected.isFavorite(mNeighbourSelected)) {
             addFavorites.setImageResource(R.drawable.ic_star_yellow_24dp);
             Log.d("FAVORIS", "Image set = jaune");
@@ -94,10 +96,12 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
         address.setText(mNeighbourSelected.getAddress());
         telephone.setText(mNeighbourSelected.getPhoneNumber());
         description.setText(mNeighbourSelected.getAboutMe());
-        socialNetwork.setText("www.facebook.fr/"+ mNeighbourSelected.getName().toLowerCase());
+        socialNetwork.setText("www.facebook.fr/" + mNeighbourSelected.getName().toLowerCase());
 
-
-        mBackButton = (ImageButton)findViewById(R.id.back_button);
+        /*
+        Back button
+         */
+        mBackButton = (ImageButton) findViewById(R.id.back_button);
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,30 +116,19 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
         addFavorites.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //List<Neighbour> neighbours = mApiService.getNeighbours("ALL");
-
-                //int index = (int) (mNeighbourSelected.getId() - 1);
-                Log.d("INDEX", "ID Voisin séléctioné - 1");
                 if (mNeighbourSelected.isFavorite(mNeighbourSelected)) {
                     mNeighbourSelected.setFavorite(0);
-                    Log.d("ETAT", "Voisin set favoris to 0");
-                    mApiService.setNeighboursFavorite(position, mNeighbourSelected);
-                    //neighbours.set(index, mNeighbourSelected);
-                    Log.d("INDEX", "Set Index to voison séléctioné");
+                    Toast.makeText(getApplicationContext(), mNeighbourSelected.getName() + " retiré(e) des favoris !", Toast.LENGTH_SHORT).show();
                     addFavorites.setImageResource(R.drawable.ic_star_white_24dp);
-                    Log.d("SUPPRESSION", "Click sur supprimer un favoris");
                 } else {
                     mNeighbourSelected.setFavorite(1);
-                    mApiService.setNeighboursFavorite(position, mNeighbourSelected);
-                   // neighbours.set(index, mNeighbourSelected);
+                    Toast.makeText(getApplicationContext(), mNeighbourSelected.getName() + " ajouté(e) des favoris !", Toast.LENGTH_SHORT).show();
                     addFavorites.setImageResource(R.drawable.ic_star_yellow_24dp);
-                    Log.d("AJOUT", "Click sur ajouter un voisin");
                 }
             }
         });
 
     }
-
 
 
 }

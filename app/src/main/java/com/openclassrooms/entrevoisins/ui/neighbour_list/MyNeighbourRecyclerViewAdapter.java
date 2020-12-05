@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
@@ -32,7 +33,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
     private final List<Neighbour> mNeighbours;
     private Context mContext;
     private boolean isFavoriteTab;
-
 
 
     public MyNeighbourRecyclerViewAdapter(Context context, List<Neighbour> items, boolean isFavoriteTab) {
@@ -58,12 +58,17 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
                 .apply(RequestOptions.circleCropTransform())
                 .into(holder.mNeighbourAvatar);
 
+        /*
+        Removing delete icon if favorites is displayed
+        else delete icon is enabled
+         */
         if(isFavoriteTab == false) {
             holder.mDeleteButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     EventBus.getDefault().post(new DeleteNeighbourEvent(neighbour));
-                    Log.d("SUPPRESSION", "Click sur supprimer un voisin");
+
+                    Toast.makeText(mContext,  neighbour.getName() + " supprimé(e) !", Toast.LENGTH_SHORT).show();
                 }
             });
         } else {
@@ -75,6 +80,7 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
 
         /* Click on item "NeighbourFragment"
         Get the neighbour position
+        Get the tab selected
         Start ProfileNeighbourActivity
          */
         holder.mNeighbourItem.setOnClickListener(new View.OnClickListener() {
@@ -84,7 +90,8 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
                 intent.putExtra("POSITION", position);
                 intent.putExtra("FRAGMENT_TAB", isFavoriteTab ? "FAVORITES" : "ALL");
                 mContext.startActivity(intent);
-                Log.d("PROFIL", "Click sur voir le profil");
+
+
             }
         });
 

@@ -28,12 +28,17 @@ public interface NeighbourApiService {
      */
     void createNeighbour(Neighbour neighbour);
 
-
+    /**
+     * Get position of neighbour
+     */
     Neighbour getNeighbourByPosition(int position);
 
-
+    /**
+     * Get all my favorites
+     */
     List<Neighbour> getNeighboursFavorites();
-
+    /**
+     * Get the position from neigbours to favorites
+     */
     void setNeighboursFavorite(int position, Neighbour neighbour);
-
 }

@@ -60,15 +60,12 @@ public class NeighbourFragment extends Fragment {
         super.onCreate(savedInstanceState);
         mApiService = DI.getNeighbourApiService();
 
-        Log.d("ALL", "Afficher liste ALL");
-
         //Checking the position of POSITION
         //Return Favorites if true
         if (getArguments() != null) {
            if(getArguments().getInt(POSITION) == 1) {
                isFavoriteTab = true;
-               targetList = "FAVORITES";
-               Log.d("FAVORIS", "Afficher liste FAVORIS");
+               targetList = "FAVORITES";;
            }
 
        }
@@ -78,6 +75,9 @@ public class NeighbourFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        /*
+        Display good view depending boolean
+         */
         View view;
         if (isFavoriteTab) {
             view = inflater.inflate(R.layout.fragment_neighbour_favlist, container, false);
@@ -93,7 +93,7 @@ public class NeighbourFragment extends Fragment {
         return view;
     }
 
-    /**
+    /*
      * Init the List of neighbours depending of targetList.
      */
     private void initList() {
@@ -128,8 +128,6 @@ public class NeighbourFragment extends Fragment {
      * Fired if the user clicks on a delete button
      * @param event
      */
-
-
     @Subscribe
     public void onDeleteNeighbour(DeleteNeighbourEvent event) {
             mApiService.deleteNeighbour(event.neighbour);
