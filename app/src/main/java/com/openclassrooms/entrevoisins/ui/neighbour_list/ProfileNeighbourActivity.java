@@ -1,6 +1,5 @@
 package com.openclassrooms.entrevoisins.ui.neighbour_list;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -22,7 +21,6 @@ import com.openclassrooms.entrevoisins.service.NeighbourApiService;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-
 
 public class ProfileNeighbourActivity extends AppCompatActivity {
 
@@ -122,13 +120,12 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
                     addFavorites.setImageResource(R.drawable.ic_star_white_24dp);
                 } else {
                     mNeighbourSelected.setFavorite(1);
-                    Toast.makeText(getApplicationContext(), mNeighbourSelected.getName() + " ajouté(e) des favoris !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), mNeighbourSelected.getName() + " ajouté(e) aux favoris !", Toast.LENGTH_SHORT).show();
                     addFavorites.setImageResource(R.drawable.ic_star_yellow_24dp);
                 }
             }
         });
 
     }
-
 
 }

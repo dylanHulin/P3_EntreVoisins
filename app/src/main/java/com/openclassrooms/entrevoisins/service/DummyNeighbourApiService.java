@@ -17,9 +17,6 @@ public class DummyNeighbourApiService implements  NeighbourApiService {
     /**
      * {@inheritDoc}
      */
-    /*
-    Returning a list of neighbours
-     */
     @Override
     public List<Neighbour> getNeighbours() {
         return neighbours;

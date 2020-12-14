@@ -23,6 +23,7 @@ import static org.junit.Assert.assertTrue;
 public class NeighbourServiceTest {
 
     private NeighbourApiService service;
+    private final int POSITION = 0;
 
     @Before
     public void setup() {
@@ -44,28 +45,29 @@ public class NeighbourServiceTest {
     }
 
     @Test
-    public void getFavoritesWithSuccess() {
+    public void getNeighboursFavorites() {
         List<Neighbour> favorites = service.getNeighboursFavorites();
         List<Neighbour> expectedFavorites = favorites;
         assertThat(favorites, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedFavorites.toArray()));
     }
 
     @Test
-    public void addFavoritesWithSuccess() {
-        Neighbour neighbour = new Neighbour(1, "test", "test", "test", "test", "test", 0);
-        neighbour.setFavorite(1);
-        service.setNeighboursFavorite(0, neighbour);
-        assertTrue(service.getNeighboursFavorites().contains(neighbour));
+    public void setNeighbourFavoriteAndRemove() {
+        Neighbour favoriteToTest = service.getNeighbourByPosition(POSITION);
+        favoriteToTest.setFavorite(1);
+        service.setNeighboursFavorite(POSITION, favoriteToTest);
+        assertTrue(service.getNeighboursFavorites().contains(favoriteToTest));
+        List<Neighbour> listFavorites = service.getNeighboursFavorites();
+        listFavorites.clear();
+        assertEquals(service.getNeighbours().get(0), favoriteToTest);
+        favoriteToTest.setFavorite(0);
+        assertFalse(service.getNeighboursFavorites().contains(favoriteToTest));
     }
 
     @Test
-    public void deleteFavoritesWithSuccess() {
-        Neighbour favoriteToDelete = service.getNeighbours().get(0);
-        List<Neighbour> listeFavorites = service.getNeighboursFavorites();
-        listeFavorites.clear();
-        listeFavorites.add(favoriteToDelete);
-        assertEquals(service.getNeighbours().get(0), favoriteToDelete);
-        service.deleteNeighbour(favoriteToDelete);
-        assertFalse(service.getNeighboursFavorites().contains(favoriteToDelete));
+    public void getNeighboursByPosition() {
+        Neighbour neighbourToTest = service.getNeighbourByPosition(POSITION);
+        assertEquals(service.getNeighbours().get(0), neighbourToTest);
     }
+
 }

@@ -72,7 +72,6 @@ public class NeighboursListTest {
     private ListNeighbourActivity mActivity;
     private List<Neighbour> mNeighbourList = DummyNeighbourGenerator.DUMMY_NEIGHBOURS;
     private NeighbourApiService mApiService = DI.getNeighbourApiService();
-    private List<Neighbour> mFavList = mApiService.getNeighboursFavorites();
 
 
     @Rule
