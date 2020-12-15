@@ -28,9 +28,6 @@ public class Neighbour {
     /** Favorite state */
     private int favorite;
 
-
-
-
     /**
      * Constructor
      * @param id

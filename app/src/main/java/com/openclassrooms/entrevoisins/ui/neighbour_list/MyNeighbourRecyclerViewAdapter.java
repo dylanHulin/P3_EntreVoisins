@@ -77,7 +77,6 @@ public class MyNeighbourRecyclerViewAdapter extends RecyclerView.Adapter<MyNeigh
         }
 
 
-
         /* Click on item "NeighbourFragment"
         Get the neighbour position
         Get the tab selected

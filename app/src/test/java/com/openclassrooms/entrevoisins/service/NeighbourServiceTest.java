@@ -51,12 +51,18 @@ public class NeighbourServiceTest {
         assertThat(favorites, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedFavorites.toArray()));
     }
 
+    //TODO Faire séparé
     @Test
-    public void setNeighbourFavoriteAndRemove() {
+    public void setNFavoriteWithSuccess() {
         Neighbour favoriteToTest = service.getNeighbourByPosition(POSITION);
         favoriteToTest.setFavorite(1);
         service.setNeighboursFavorite(POSITION, favoriteToTest);
         assertTrue(service.getNeighboursFavorites().contains(favoriteToTest));
+    }
+    @Test
+    public void removeFavoriteWithSuccess(){
+        Neighbour favoriteToTest = service.getNeighbourByPosition(POSITION);
+        favoriteToTest.setFavorite(1);
         List<Neighbour> listFavorites = service.getNeighboursFavorites();
         listFavorites.clear();
         assertEquals(service.getNeighbours().get(0), favoriteToTest);

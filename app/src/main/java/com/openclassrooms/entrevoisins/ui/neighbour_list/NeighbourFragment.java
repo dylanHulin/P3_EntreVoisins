@@ -24,9 +24,6 @@ import org.greenrobot.eventbus.Subscribe;
 
 import java.util.List;
 
-
-
-
 public class NeighbourFragment extends Fragment {
 
     private NeighbourApiService mApiService;
