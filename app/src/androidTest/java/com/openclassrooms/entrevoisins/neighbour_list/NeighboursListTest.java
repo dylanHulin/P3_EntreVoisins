@@ -114,7 +114,7 @@ public class NeighboursListTest {
         //Given : Click on the item
         onView(allOf(ViewMatchers.withId(R.id.list_neighbours), isDisplayed())).perform(
                                 actionOnItemAtPosition(0,click()));
-        //Then : Go to the Vue Activity
+        //Then : Go to the profile Activity
         onView(withId(R.id.profile_neighbour)).check(matches(isDisplayed()));
     }
 

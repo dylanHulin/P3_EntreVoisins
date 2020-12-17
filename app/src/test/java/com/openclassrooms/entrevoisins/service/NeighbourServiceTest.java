@@ -24,6 +24,7 @@ public class NeighbourServiceTest {
 
     private NeighbourApiService service;
     private final int POSITION = 0;
+    private List<Neighbour> favoriteNeighbours;
 
     @Before
     public void setup() {
@@ -44,14 +45,22 @@ public class NeighbourServiceTest {
         assertFalse(service.getNeighbours().contains(neighbourToDelete));
     }
 
+    // CHECK
     @Test
     public void getNeighboursFavorites() {
-        List<Neighbour> favorites = service.getNeighboursFavorites();
-        List<Neighbour> expectedFavorites = favorites;
-        assertThat(favorites, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedFavorites.toArray()));
+        service.getNeighboursFavorites().clear();
+        List<Neighbour> expectedNeighbours = DummyNeighbourGenerator.DUMMY_NEIGHBOURS;
+        for (Neighbour neighbour : service.getNeighbours()) {
+            if (!neighbour.isFavorite(neighbour)) {
+                neighbour.setFavorite(1);
+            }
+        }
+        service.getNeighboursFavorites().addAll(expectedNeighbours);
+        favoriteNeighbours = service.getNeighboursFavorites();
+        assertThat(favoriteNeighbours, IsIterableContainingInAnyOrder.containsInAnyOrder(expectedNeighbours.toArray()));
     }
 
-    //TODO Faire séparé
+
     @Test
     public void setNFavoriteWithSuccess() {
         Neighbour favoriteToTest = service.getNeighbourByPosition(POSITION);

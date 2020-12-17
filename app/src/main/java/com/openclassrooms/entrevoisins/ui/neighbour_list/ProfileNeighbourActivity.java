@@ -96,6 +96,7 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
         description.setText(mNeighbourSelected.getAboutMe());
         socialNetwork.setText("www.facebook.fr/" + mNeighbourSelected.getName().toLowerCase());
 
+        //CHECK
         /*
         Back button
          */
@@ -103,8 +104,7 @@ public class ProfileNeighbourActivity extends AppCompatActivity {
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent backMainActivity = new Intent(getApplicationContext(), ListNeighbourActivity.class);
-                startActivity(backMainActivity);
+                finish();
             }
         });
 
